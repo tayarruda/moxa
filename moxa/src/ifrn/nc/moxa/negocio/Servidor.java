@@ -11,18 +11,20 @@ public class Servidor {
 	private String matricula;
 	private String classificacao;
 	private String senha;
+	private Perfil perfil;
 	private List<Entrada> entradas;
 
-	public Servidor(int id, String nome, String matricula, String classificacao, String senha) {
+	public Servidor(int id, String nome, String matricula,
+			String classificacao, String senha, Perfil perfil) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.matricula = matricula;
 		this.classificacao = classificacao;
 		this.senha = senha;
+		this.perfil = perfil;
 		this.entradas = new ArrayList<>();
 	}
-
 
 	public Servidor() {
 		super();
@@ -72,14 +74,21 @@ public class Servidor {
 		this.entradas = entradas;
 	}
 
-
 	public String getSenha() {
 		return senha;
 	}
-
 
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 
+	public Perfil getPerfil() {
+		return perfil;
+	}
+
+	public void setPerfil(Perfil perfil) {
+		this.perfil = perfil;
+	}
+
+	
 }
